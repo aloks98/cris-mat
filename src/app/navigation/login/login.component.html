@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<div class='bgimg'>
+<section class="mat-typography">
+    <header>
+        <h1>Centre for Railway Information Systems</h1>
+        <h2>Terminal Database Management</h2>
+    </header>
+</section>
+<div class='mainapp'>
+    <body>
+        <mat-card class='logincard' color='accent'>
+            <mat-card-header>
+                <mat-card-title>Login</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form class='mainlogin' #loginform="ngForm" (ngSubmit)="submit(loginform)">
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input matInput required placeholder="username" name="username" [(ngModel)]="username">
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput required placeholder="Password" type="password" name="password" [(ngModel)]="password">
+                        </mat-form-field>
+                    </p>
+                    <button mat-raised-button type="submit" class="submitbtn" [disabled]="!loginform.form.valid" (click)="onLoginClick(loginform)">Submit</button>
+                </form>
+            </mat-card-content>
+
+        </mat-card>
+    </body>
+</div>
+</div>

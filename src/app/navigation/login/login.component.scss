@@ -1,0 +1,28 @@
+.logincard {
+    top: 100px;
+    left: 100px;
+    position: absolute;
+}
+
+.mainlogin {
+    height: 300px;
+    width: 300px;
+}
+
+.logincomponent {
+    width: 100%;
+}
+
+.submitbtn {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+body, html {
+    height: 100%;
+}
+
+.bgimg {
+    background: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg') no-repeat center fixed;
+    background-size: cover;
+}
