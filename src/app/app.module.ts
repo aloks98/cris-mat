@@ -8,12 +8,20 @@ import { HomeComponent } from './navigation/home/home.component';
 import { MaterialModule } from './modules/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms';
+import { CreateComponent } from './navigation/create/create.component';
+import { ModifyComponent } from './navigation/modify/modify.component';
+import { DeleteComponent } from './navigation/delete/delete.component';
+import { DisplayComponent } from './navigation/display/display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    CreateComponent,
+    ModifyComponent,
+    DeleteComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,

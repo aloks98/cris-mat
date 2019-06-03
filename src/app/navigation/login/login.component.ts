@@ -10,13 +10,6 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  submit(form) {
-    {
-      
-    }
-    console.log("it works");
-  }
-
   public onLoginClick(form){
     if(form.value.username=='alok' && form.value.password=='alok'){
       this.router.navigate(['./home']);
