@@ -1,3 +1,57 @@
-<p>
-  create works!
-</p>
+<!DOCTYPE html>
+<header>
+  <div>
+    <mat-toolbar class='usertoolbar'>
+      <span>User: {{ user }}</span>
+      <span>Centre for Railway Information Systems</span>
+      <button mat-button type='submit' (click)="onLogoutClick()">Logout</button>
+      <button mat-button type='submit' (click)="onHomeClick()">Home</button>
+    </mat-toolbar>
+  </div>
+</header>
+<section class='mat-typography'>
+  <form #terminalform="ngForm">
+    <div class='createterminal'>
+      <mat-tab-group color='primary' backgroundColor="primary">
+        <mat-tab label="Create Terminal">
+          <h4>Terminal Code</h4>
+          <mat-form-field appearance="outline">
+            <mat-label>Terminal Code</mat-label>
+            <input matInput required placeholder="TCODE">
+          </mat-form-field>
+          <h4>Terminal Location</h4>
+          <mat-form-field appearance="outline">
+            <mat-label>Terminal Location</mat-label>
+            <input matInput required placeholder="TLOCN">
+          </mat-form-field>
+          <h4>Server Type</h4>
+          <mat-form-field>
+            <mat-select>
+              <mat-option required *ngFor="let server of servers" [value]="server.value">
+                {{server.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <h4>IP Address</h4>
+          <mat-form-field appearance="outline">
+            <mat-label>IP Address</mat-label>
+            <input matInput required placeholder="IPADDR" type="text" minlength="7" maxlength="15" size="15"
+              pattern="^([0-9]{1,3})[.]([0-9]{1,3})[.]([0-9]{1,3})[.]([0-9]{1,3})$">
+          </mat-form-field>
+          <button color='primary' mat-raised-button type="submit" class="submitbtn" [disabled]="!terminalform.form.valid">Submit</button>
+                
+        </mat-tab>
+        <mat-tab label="Terminal Characteristics">
+
+        </mat-tab>
+        <mat-tab label="Terminal Timings">
+
+        </mat-tab>
+        <mat-tab label="POS Details">
+
+        </mat-tab>
+      </mat-tab-group>
+
+    </div>
+  </form>
+</section>

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <div class='homepage'>
   <header>
-    <div >
+    <div>
       <mat-toolbar class='usertoolbar'>
         <span>User: {{ user }}</span>
         <span>Centre for Railway Information Systems</span>
         <button mat-button type='submit' (click)="onLogoutClick()">Logout</button>
       </mat-toolbar>
-      <p>
-        <mat-toolbar class='maintoolbar'>
-          <button mat-raised-button (click)='onCreateClick()'>Create</button>
-          <button mat-raised-button (click)='onModifyClick()'>Modify</button>
-          <button mat-raised-button (click)='onDeleteClick()'>Delete</button>
-          <button mat-raised-button (click)='onDisplayClick()'>Display</button>
-        </mat-toolbar>
-      </p>
     </div>
   </header>
+  <p>
+    <mat-toolbar class='maintoolbar'>
+      <button mat-button (click)='onCreateClick()'>Create</button>
+      <button mat-button (click)='onModifyClick()'>Modify</button>
+      <button mat-button (click)='onDeleteClick()'>Delete</button>
+      <button mat-button (click)='onDisplayClick()'>Display</button>
+    </mat-toolbar>
+  </p>
 </div>
